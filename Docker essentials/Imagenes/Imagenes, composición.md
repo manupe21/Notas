@@ -43,3 +43,19 @@ docker image prune
 	-a : Borra todas
 	
 ````
+
+Para crear una imagen a partir de un contenedor es necesario hacer un commit a partir del contenedor de origen
+
+````
+docker commit <contenedor> <nombre imagen>
+	-a: autor
+	-m: mensaje
+	 
+````
+
+Aveces es normal aplicarle un tag a una imagen, por ejemplo latest a una versióm
+
+````
+docker image tag <imagen:tag> <imagen:segundoTag>
+````
+
