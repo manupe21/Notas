@@ -11,3 +11,20 @@ Son una serie de instrucciones que describen como crear una imagen
 	* CMD: Comando a ejecutar al instanciar la imagen
 	* ENTRYPOINT: Lo mismo que CMD pero no se puede sobreescribir
 
+## Ejemplo de archivo dockerfile 
+
+Instrucciones para el fichero: 
+- Base: alpine.
+- Directorio de trabajo: /app.
+- Puerto expuesto: 8080.
+- Comando por defecto: top
+
+````sh
+vim Dockerfile
+------------------------------
+FROM alpine:latest
+WORKDIR /app
+EXPOSE  8080
+ENTRYPOINT ["top"]
+
+````

@@ -3,6 +3,7 @@ Las imágenes están formadas por capas (que son fases en las que se constuyen)
 
 Las imágenes tienen *tags*, es decir etiquetas que nos dice la versión, si no se especifica, se da por entendido que quieres bajar la última versión (latest).
 
+
 El comando para descargar una imagen es el siguiente:
 
 ````
@@ -57,5 +58,20 @@ Aveces es normal aplicarle un tag a una imagen, por ejemplo latest a una versió
 
 ````
 docker image tag <imagen:tag> <imagen:segundoTag>
+````
+
+Para hacer una copia de seguridad de una imagen se puede usar el comando *docker save*
+
+````
+docker save  nombre_imagen:tag
+	-o nombre_archivo.tar
+````
+
+Subir una imagen a un repositorio.
+Necesitas etiquetar tu imagen local con tu nombre de usuario para que el repositorio sepa a dónde enviarla.
+
+
+````
+docker tag <imagen> <usuario en repositorio>/ubuntu-apache:v1
 ````
 
